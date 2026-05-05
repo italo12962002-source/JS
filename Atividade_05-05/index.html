@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<style>
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+
+form {
+background: #ffffff;
+padding: 30px 40px;
+border-radius: 12px;
+width: 350px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+#titulo {
+    position: static;
+    text-align: center;
+    color: rgb(8, 8, 8);
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+        margin-top: 20px;
+}
+.titulo{
+    background-color: white;
+padding: 8px 19px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 20px;
+}
+
+
+label {
+display: block;
+margin-top: 12px;
+margin-bottom: 5px;
+font-size: 14px;
+color: #333;
+}
+
+
+input, select {
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 8px;
+outline: none;
+transition: 0.3s;
+}
+
+
+input:focus, select:focus {
+border-color: #4facfe;
+box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
+
+#botao {
+width: 100%;
+margin-top: 20px;
+padding: 12px;
+border: none;
+border-radius: 8px;
+background: #4facfe;
+color: white;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+
+#botao:hover {
+background: #00c6ff;
+}
+
+
+input[type="color"] {
+padding: 3px;
+height: 40px;
+}
+
+input[type="date"],
+input[type="time"] {
+font-size: 14px;
+}
+</style>
+<body>
+<div class="container"> 
+    <div class="titulo">
+    <h1 id="titulo">Formulário de Cadastro</h1>
+    </div>
+    <form action="https://sheetdb.io/api/v1/os9ygkljqb5on" method="POST">
+        <label for="nome">Nome:</label> 
+        <input type="text" id="nome" name="data[nome]" required> 
+        <label for="sobrenome">Sobrenome:</label> 
+        <input type="text" id="sobrenome" name="data[sobrenome]" required> 
+        <label for="email">E-mail:</label> 
+        <input type="email" id="email" name="data[email]" required> 
+        <label for="cpf">CPF:</label> 
+        <input type="number" name="data[cpf]" id="numero"> 
+        <label for="cor">Cor Favorita:</label> 
+        <input type="color" name="data[cor]" id="cor"> 
+        <label for="data">Data de Nacimento:</label> 
+        <input type="date" name="data[data]" id="data"> 
+        <label for="hora">Horário de Atendimento:</label> 
+        <input type="time" name="data[hora]" id="hora"> 
+        <label for="fone">Telefone:</label> 
+        <input type="tel" name="data[fone]" id="fone" placeholder="(00) 0 0000-0000"> 
+        <label for="cidade">Cidade:</label> 
+        <input type="text" id="cidade" name="data[cidade]" required> 
+        <label for="estados">Selecione o Estado</label> 
+        <select name="data[estados]" id="estados"> 
+            <option value="BA">BA</option> 
+            <option value="MG" selected>MG</option> 
+            <option value="SC">SC</option> 
+            <option value="MA">MA</option> 
+        </select> <button type="submit" id="botao">Enviar Formulário</button>
+    </form> </div> <script src="scriptforms.js"></script>
+</body>
+</html>
